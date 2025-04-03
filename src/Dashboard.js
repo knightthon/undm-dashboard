@@ -34,7 +34,7 @@ class Dashboard extends React.Component{
             .then(data => {
                 this.setState({donations: data})
                 data.forEach(d => {
-                    if(!this.state.oldDonations.map(o => o.donationID).includes(d.donationID) && d.amount >= 50.0){
+                    if(!this.state.oldDonations.map(o => o.donationID).includes(d.donationID) && d.amount >= 50000.0){
                         this.setState({bigDonation: d});
                         document.getElementById('donationAlert').classList.remove("donationAlertHidden");
                         this.start();
@@ -61,7 +61,6 @@ class Dashboard extends React.Component{
         </Row>
         <Row style={{display: "inline-block"}}>
             <div className="countdown">
-                <Countdown date={new Date("Apr 05, 2025 22:00:00")} daysInHours={true}/>
                 <span style={{padding: 0}}> Knight-Thon Main Event 2025!</span>
             </div>
         </Row>
