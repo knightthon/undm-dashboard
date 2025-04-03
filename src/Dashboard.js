@@ -61,7 +61,6 @@ class Dashboard extends React.Component{
         </Row>
         <Row style={{display: "inline-block"}}>
             <div className="countdown">
-                <span style={{padding: 0}}> Knight-Thon Main Event 2025!</span>
             </div>
         </Row>
         {/* <Row>
